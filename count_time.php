@@ -3,7 +3,7 @@
 // file to save target date
 $saved_date = file_get_contents('time.txt');
 
-// $interval - interval in days
+// $interval - interval in days to clear counter
 $interval = 4;
 
 if (  strtotime("now") >= strtotime($saved_date) )
