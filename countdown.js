@@ -32,13 +32,11 @@ CountdownTimer.prototype={
 	},addZero:function(num){ return ('0'+num).slice(-2); }
 }
 function CDT(){
-
 	$.post( "count_time.php", function( data ) {
 		var gl = new Date(data);
 		var timer = new CountdownTimer('CDT',gl,'<span class="number-wrapper"><div class="line"></div><span class="number end">Упс! Время вышло!</span></span>');
 		timer.countDown();
 	});
-
 }
 window.onload=function(){
 	CDT();
